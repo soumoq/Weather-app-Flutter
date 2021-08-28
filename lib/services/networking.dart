@@ -14,10 +14,6 @@ class NetworkHelper{
     if (response.statusCode == 200) {
       String data = response.body;
       var decode = jsonDecode(data);
-      var temp = decode['main']['temp'];
-      var condition = decode['weather'][0]['id'];
-      var city = decode['name'];
-      print('$temp $condition $city');
       return decode;
     }else{
       print(response.statusCode);
